@@ -21,10 +21,33 @@ class App extends React.Component {
 }
 
 class Test extends React.Component{
+     
+    // getInitialState()  -> could we use this instead of using an constructor getting an error though
+     constructor()
+     {
+         super();
+         this.state={checked:true};
+         
+     }
+
+     handleChecked(){
+     	this.setState({checked: this.state.checked});
+     }
+
      render() {
+     	var msg;
+     	if(this.state.checked)
+     	  {
+     		msg="checked";
+     	  }else 
+     	  {
+     	  	msg="not checked";
+          } 
      	return(
      		  <div>
      		      <p>wooh... other component</p>
+     		      <input type="checkbox" onChange={this.handleChecked} defaultChecked={this.state.checked}/>
+     		      <p>{msg}</p>
      		  </div>
      		  );
      }
