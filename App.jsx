@@ -14,15 +14,20 @@ class App extends React.Component {
             <p data-value="answer">{1+1}</p>   
             {/*{} are used to process javascript in html*/}
             <p style={mystyle}>{value==1?'if yes':'if no'}</p>
-            <Test /> 
+            <Test value={"properties"}/> 
+            <p>{this.props.name}</p>
          </div>
       );
    }
 }
 
+App.defaultProps = {
+	name:"swastik"
+}
+
 class Test extends React.Component{
      
-    // getInitialState()  -> could we use this instead of using an constructor getting an error though
+    // getInitialState()  -> could we use this instead of using an constructor,getting an error though
      constructor()
      {
          super();
@@ -48,6 +53,7 @@ class Test extends React.Component{
      		      <p>wooh... other component</p>
      		      <input type="checkbox" onChange={this.handleChecked} defaultChecked={this.state.checked}/>
      		      <p>{msg}</p>
+     		      <p>{this.props.value}</p>
      		  </div>
      		  );
      }
