@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 class App extends React.Component {
    render() {            //render is used to process and display html
@@ -16,6 +17,7 @@ class App extends React.Component {
             <p style={mystyle}>{value==1?'if yes':'if no'}</p>
             <Test value={"properties"}/> 
             <p>{this.props.name}</p>
+            <Link to="Path1"><button>path1</button></Link>
          </div>
       );
    }
