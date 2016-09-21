@@ -1,4 +1,5 @@
 import React from 'react';
+import Gallery from './jsx/Gallery.jsx';
 import {Link} from 'react-router';
 
 class App extends React.Component {
@@ -34,9 +35,14 @@ class Test extends React.Component{
      {
          super();
          this.state={checked:true};
+         var urls=['/reacapp/images/gym1.jpg','/reacapp/images/gym2.jpeg','/reacapp/images/gym3.jpeg',
+     ];
+         
+         
         // var that = this;  // why is this not working
          this.handleChecked=this.handleChecked.bind(this);
      }
+     
 
      handleChecked(){
      	this.setState({checked: !this.state.checked});
@@ -57,6 +63,7 @@ class Test extends React.Component{
      		      <input type="checkbox" onChange={this.handleChecked} defaultChecked={this.state.checked}/>
      		      <p>{msg}</p>
      		      <p>{this.props.value}</p>
+              <Gallery imageurls={this.urls} />
      		  </div>
      		  );
      }
