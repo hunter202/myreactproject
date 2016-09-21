@@ -32,11 +32,12 @@ class Test extends React.Component{
      {
          super();
          this.state={checked:true};
-         
+        // var that = this;  // why is this not working
+         this.handleChecked=this.handleChecked.bind(this);
      }
 
      handleChecked(){
-     	this.setState({checked: this.state.checked});
+     	this.setState({checked: !this.state.checked});
      }
 
      render() {
