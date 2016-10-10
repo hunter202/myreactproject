@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, hashHistory } from "react-router";
 import App from './App.jsx';
 import Path1 from './jsx/Path1.jsx'
-import Gallery from './jsx/Gallery.jsx'
+//import Gallery from './jsx/Gallery.jsx'
 
 ReactDOM.render(
 	<Router history={hashHistory}>
