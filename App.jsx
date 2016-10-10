@@ -87,7 +87,7 @@ class Test extends React.Component{
 
     
     // var that = this;  // why is this not working
-    this.handleChecked = this.handleChecked.bind(this);  //bind is required beacuse of clashing of object oriented feature of js with functional oriented
+    this.handleChecked = this.handleChecked.bind(this);  //bind is required beacuse of clashing of object oriented paradigm of js with functional paradigm
     this.storedata = this.storedata.bind(this);
   }
      
@@ -149,4 +149,3 @@ export default App;
 
 //_functname is used to refer that function is not predefined instead is an user defined function
 
-//ref is used in place of an id to identify an attribute "reacty" lol
